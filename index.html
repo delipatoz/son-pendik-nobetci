@@ -5,79 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pendik Nöbetçi Eczaneler</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       background: #000;
       color: #fff;
+      height: 100%;
+      width: 100%;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    .wrapper {
-      width: 100vw;
-      height: 100vh;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+      overflow: hidden;
     }
     .header {
       text-align: center;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       font-weight: 700;
+      padding: 20px 0 10px 0;
     }
     .sub {
       text-align: center;
-      font-size: 1rem;
+      font-size: 1.2rem;
       opacity: 0.7;
+      margin-bottom: 10px;
     }
-    .widget {
-      flex: 1;
-      background: #111;
-      border-radius: 16px;
-      padding: 12px;
-      overflow: hidden;
+    .frame-container {
+      width: 100vw;
+      height: calc(100vh - 120px);
       display: flex;
-      align-items: stretch;
       justify-content: center;
+      align-items: flex-start;
     }
-    .eczane-widget {
-      width: 100%;
-      max-width: 800px;
-      margin: auto;
-    }
-    .eczane-widget img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 12px;
-    }
-    .eczane-widget iframe {
-      width: 100%;
-      height: 70vh !important; /* TV'de büyük görünmesi için */
+    iframe {
+      width: 100vw;
+      height: 100%;
       border: none;
+      transform: scale(1.4);    /* İçeriği büyütme oranı */
+      transform-origin: top center;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="header">BUGÜN PENDİK NÖBETÇİ ECZANELER</div>
-    <div class="sub">Liste otomatik olarak güncellenir</div>
 
-    <div class="widget">
-      <div class="eczane-widget">
-        <!-- eczaneler.gen.tr kodu buraya yerleştirildi -->
-        <div style="margin:auto;text-align:center;width:100%;max-width:400px;">
-          <a href="https://www.eczaneler.gen.tr/nobetci-istanbul-pendik" target="_blank">
-            <img src="https://www.eczaneler.gen.tr/resimler/nobetci-eczane.jpg"
-                 alt="Pendik nöbetçi eczaneleri">
-          </a>
-          <iframe src="https://www.eczaneler.gen.tr/iframe.php?lokasyon=1835"
-                  name="Pendik nöbetçi eczaneleri"></iframe>
-        </div>
-      </div>
-    </div>
+  <div class="header">BUGÜN PENDİK NÖBETÇİ ECZANELER</div>
+  <div class="sub">Liste otomatik olarak güncellenir</div>
+
+  <div class="frame-container">
+    <iframe 
+      src="https://www.eczaneler.gen.tr/iframe.php?lokasyon=1835"
+      name="Pendik nöbetçi eczaneleri">
+    </iframe>
   </div>
+
 </body>
 </html>
