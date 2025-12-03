@@ -38,12 +38,25 @@
       background: #111;
       border-radius: 16px;
       padding: 12px;
-      overflow: auto;
+      overflow: hidden;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
     }
-    /* Liste yazıları biraz büyük gözüksün diye */
-    .widget * {
-      font-size: 1.15rem !important;
-      line-height: 1.4;
+    .eczane-widget {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+    }
+    .eczane-widget img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .eczane-widget iframe {
+      width: 100%;
+      height: 70vh !important; /* TV'de büyük görünmesi için */
+      border: none;
     }
   </style>
 </head>
@@ -53,7 +66,17 @@
     <div class="sub">Liste otomatik olarak güncellenir</div>
 
     <div class="widget">
-      <!-- <div style="margin:auto;text-align:center;width:100&#37;;max-width:400px;"><a href="https://www.eczaneler.gen.tr/nobetci-istanbul-pendik" target="_blank"><img src="https://www.eczaneler.gen.tr/resimler/nobetci-eczane.jpg" alt="Pendik nöbetçi eczaneleri" style="width:100&#37;;border-radius:2px;"></a><iframe src="https://www.eczaneler.gen.tr/iframe.php?lokasyon=1835" name="Pendik nöbetçi eczaneleri" style="width:100&#37;;height:240px;border:none;"></iframe></div> -->
+      <div class="eczane-widget">
+        <!-- eczaneler.gen.tr kodu buraya yerleştirildi -->
+        <div style="margin:auto;text-align:center;width:100%;max-width:400px;">
+          <a href="https://www.eczaneler.gen.tr/nobetci-istanbul-pendik" target="_blank">
+            <img src="https://www.eczaneler.gen.tr/resimler/nobetci-eczane.jpg"
+                 alt="Pendik nöbetçi eczaneleri">
+          </a>
+          <iframe src="https://www.eczaneler.gen.tr/iframe.php?lokasyon=1835"
+                  name="Pendik nöbetçi eczaneleri"></iframe>
+        </div>
+      </div>
     </div>
   </div>
 </body>
