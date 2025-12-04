@@ -33,18 +33,17 @@
     .frame-area {
       width: 100vw;
       height: calc(100vh - 120px);
-      display: flex;
-      justify-content: center;        /* tam ortalama */
-      align-items: flex-start;
+      display: grid;                /* tam ortalama için grid */
+      place-items: start center;    /* yukarıdan ve tam ortadan */
       overflow: hidden;
     }
 
     iframe {
       border: none;
-      width: 750px;                   /* İçeriği genişletiyoruz */
-      height: 150vh;                  /* Daha fazla alan göstermek için */
-      transform: scale(2.1);          /* Ekrana tam oturması için büyütme */
-      transform-origin: top center;   /* Merkezden hizalama */
+      width: 520px;                 /* sütun genişliği */
+      height: 150vh;
+      transform: scale(2.2);        /* büyüklük ayarı */
+      transform-origin: top center; /* merkezden hizala */
     }
   </style>
 </head>
